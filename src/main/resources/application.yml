@@ -1,0 +1,18 @@
+project:
+  name: Bo's Test Project
+  version: 1.0.0.1
+  copyright: 2020-9999
+
+server:
+  port: 80
+
+spring:
+  thymeleaf:
+    cache: false  #关闭thymeleaf缓存
+    encoding: utf-8
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: mybatis
+    password: mybatis
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
