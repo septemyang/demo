@@ -17,18 +17,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int deleteUserById(Integer id) {
-        return userMapper.deleteUserById(id);
+    public int deleteUserById(Integer userid) {
+        return userMapper.deleteUserById(userid);
     }
 
     @Override
-    public int updateUserById(Integer id) {
-        return userMapper.updateUserById(id);
+    public int updateUserById(User record) {
+        return userMapper.updateUserById(record);
     }
 
     @Override
-    public User selectUserById(Integer id) {
-        return userMapper.selectUserById(id);
+    public User selectUserById(Integer userid) {
+        return userMapper.selectUserById(userid);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.example.demo.dao;
 
 public class User {
-    private int id;
+    private int userid;
     private String username;
     private String userpassword;
     private int userage;
@@ -9,8 +9,8 @@ public class User {
     public User(){
 
     }
-    public User(int id, String username, String userpassword, int userage, String userroll ){
-        this.id=id;
+    public User(int userid, String username, String userpassword, int userage, String userroll ){
+        this.userid=userid;
         this.username=username;
         this.userpassword=userpassword;
         this.userage=userage;
@@ -18,12 +18,12 @@ public class User {
 
     }
 
-    public int getId() {
-        return id;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getUsername() {
@@ -61,12 +61,12 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "userid=" + userid +
                 ", username='" + username + '\'' +
                 ", userpassword='" + userpassword + '\'' +
                 ", userage=" + userage +
                 ", userroll='" + userroll + '\'' +
-                '}';
+                '}'+"<br>";
     }
 
 

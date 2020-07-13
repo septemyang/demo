@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.dao.User;
 import com.example.demo.service.UserService;
-import com.example.demo.service.UserServiceImpl;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +15,7 @@ public class UserController {
     @RequestMapping("/add")
     public String users() {
         User user = new User();
-        user.setId(3);
+        user.setUserid(3);
         user.setUsername("杨波");
         user.setUserpassword("abc");
         user.setUserage(18);
@@ -32,16 +31,17 @@ public class UserController {
     @RequestMapping("/update")
     public String update(){
         User user = new User();
-        user.setUsername("杨波");
-        user.setUserpassword("abc");
-        user.setUserage(18);
-        user.setUserroll("admin");
-        int result=userService.updateUserById(2);
+        user.setUserid(2);
+        user.setUsername("bo");
+        user.setUserpassword("abc/update");
+        user.setUserage(199);
+        user.setUserroll("a");
+        int result=userService.updateUserById(user);
         return result+"";
     }
     @RequestMapping("/selectone")
     public String selectone(){
-        User user=userService.selectUserById(1);
+        User user=userService.selectUserById(2);
         return user.toString();
     }
     @RequestMapping("/selectall")
