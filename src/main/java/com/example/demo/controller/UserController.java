@@ -16,7 +16,7 @@ public class UserController {
     public String users() {
         User user = new User();
         user.setUserid(3);
-        user.setUsername("杨波");
+        user.setUsername("steven");
         user.setUserpassword("abc");
         user.setUserage(18);
         user.setUserroll("admin");
@@ -51,8 +51,4 @@ public class UserController {
         return users.toString();
 
     }
-
-
-
-
 }
